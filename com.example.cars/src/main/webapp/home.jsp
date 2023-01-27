@@ -13,17 +13,21 @@ Welcome ${cname }
 <li><a href=description id="temp" name="temp">${listValue }</a></li>
 </c:forEach>
 </ul>
-<form:form method="POST" action="/description">
 <table cellpadding="2" cellspacing="2" border="1">
 <tr>
 <th>Cars</th>
 </tr>
-<c:forEach var="p" items="${lists }">
 <tr>
-<td>${p }</td>
+<th>Desc</th>
+</tr>
+<c:forEach items="${cars }" var="p">
+<tr>
+<td>${p.name }</td>
+</tr>
+<tr>
+<td>${p.desc }</td>
 </tr>
 </c:forEach>
 </table>
-</form:form>
 </body>
 </html>
